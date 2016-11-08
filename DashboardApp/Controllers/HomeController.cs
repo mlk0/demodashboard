@@ -13,16 +13,16 @@ namespace DashboardApp.Controllers
 
 
 
-      //var dashboardReport = new DashboardReport
-      //{
-      //  NewComments = db.Comments.Count(),
-      //  NewTasks = db.Tasks.Count(),
-      //  NewOrders = db.Orders.Count(),
-      //  SupportTickets = db.SupportTickets.Count()
-      //};
+            var dashboardReport = new DashboardReport
+            {
+                NewComments = db.Comments.Count(),
+                NewTasks = db.Tasks.Count(),
+                NewOrders = db.Orders.Count(),
+                SupportTickets = db.SupportTickets.Count()
+            };
 
-            var dashboardReportJsonString = @"{'NewComments':87,'NewTasks':27,'NewOrders':781,'SupportTickets':54}";
-            var dashboardReport = JsonConvert.DeserializeObject<DashboardReport>(dashboardReportJsonString);
+            //var dashboardReportJsonString = @"{'NewComments':87,'NewTasks':27,'NewOrders':781,'SupportTickets':54}";
+            //var dashboardReport = JsonConvert.DeserializeObject<DashboardReport>(dashboardReportJsonString);
 
       ViewBag.Title = "Home";
       return View(dashboardReport);
